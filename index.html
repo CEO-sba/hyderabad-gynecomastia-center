@@ -904,45 +904,61 @@
             .container { padding: 0 20px; }
 
             /* Seamless mobile nav */
-            .nav { padding: 16px 0; }
-            .nav.scrolled { padding: 12px 0; }
-            .nav-logo img { height: 30px; }
+            .nav { padding: 14px 0; }
+            .nav.scrolled { padding: 10px 0; }
+            .nav-logo img { height: 28px; }
             .nav.scrolled .nav-logo img { height: 24px; }
             .hamburger { display: flex; }
             .nav-links {
                 display: flex; flex-direction: column;
                 position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-                background: linear-gradient(180deg, rgba(10, 22, 40, 0.99) 0%, rgba(15, 33, 64, 0.99) 100%);
-                backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px);
+                background: rgba(8, 14, 26, 0.97);
+                backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px);
                 align-items: center; justify-content: center;
-                gap: 0; z-index: 1001;
+                gap: 4px; z-index: 1001;
                 opacity: 0; visibility: hidden;
-                transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+                transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
                 pointer-events: none;
+                padding: 80px 40px 40px;
             }
             .nav-links.open {
                 opacity: 1; visibility: visible; pointer-events: auto;
             }
             .nav-links a {
-                font-size: 20px; letter-spacing: 2px; padding: 16px 0;
-                opacity: 0; transform: translateY(20px);
+                font-size: 18px; letter-spacing: 3px; padding: 14px 0;
+                opacity: 0; transform: translateY(16px);
                 transition: opacity 0.3s ease, transform 0.3s ease, color 0.3s ease;
+                color: rgba(255,255,255,0.75) !important;
+                text-align: center; width: 100%;
+                border-bottom: 1px solid rgba(43, 108, 176, 0.08);
             }
+            .nav-links a::after { display: none !important; }
+            .nav-links a:last-of-type:not(.nav-cta) { border-bottom: none; }
             .nav-links.open a {
                 opacity: 1; transform: translateY(0);
             }
-            .nav-links.open a:nth-child(1) { transition-delay: 0.08s; }
-            .nav-links.open a:nth-child(2) { transition-delay: 0.12s; }
-            .nav-links.open a:nth-child(3) { transition-delay: 0.16s; }
-            .nav-links.open a:nth-child(4) { transition-delay: 0.2s; }
-            .nav-links.open a:nth-child(5) { transition-delay: 0.24s; }
-            .nav-links.open a:nth-child(6) { transition-delay: 0.28s; }
-            .nav-links.open a:nth-child(7) { transition-delay: 0.32s; }
-            .nav-links.open a:nth-child(8) { transition-delay: 0.36s; }
+            .nav-links.open a:hover {
+                color: var(--blue-glow) !important;
+            }
+            .nav-links.open a:nth-child(1) { transition-delay: 0.06s; }
+            .nav-links.open a:nth-child(2) { transition-delay: 0.1s; }
+            .nav-links.open a:nth-child(3) { transition-delay: 0.14s; }
+            .nav-links.open a:nth-child(4) { transition-delay: 0.18s; }
+            .nav-links.open a:nth-child(5) { transition-delay: 0.22s; }
+            .nav-links.open a:nth-child(6) { transition-delay: 0.26s; }
+            .nav-links.open a:nth-child(7) { transition-delay: 0.30s; }
+            .nav-links.open a:nth-child(8) { transition-delay: 0.34s; }
             .nav-cta {
-                margin-top: 16px !important;
-                padding: 16px 40px !important;
-                font-size: 14px !important;
+                margin-top: 20px !important;
+                padding: 16px 48px !important;
+                font-size: 13px !important;
+                letter-spacing: 2px !important;
+                border-bottom: none !important;
+                border-radius: 50px;
+                background: linear-gradient(135deg, var(--blue-brand), var(--blue-bright)) !important;
+                box-shadow: 0 4px 24px rgba(43, 108, 176, 0.5) !important;
+                color: var(--white) !important;
+                width: auto !important;
             }
 
             /* Hero mobile */
