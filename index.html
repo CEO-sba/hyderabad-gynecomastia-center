@@ -153,6 +153,8 @@
         }
         .nav-logo img {
             height: 44px;
+            max-width: 200px;
+            object-fit: contain;
             transition: all 0.4s ease;
             filter: drop-shadow(0 2px 8px rgba(43, 108, 176, 0.3));
         }
@@ -906,8 +908,8 @@
             /* Seamless mobile nav */
             .nav { padding: 14px 0; }
             .nav.scrolled { padding: 10px 0; }
-            .nav-logo img { height: 38px; }
-            .nav.scrolled .nav-logo img { height: 32px; }
+            .nav-logo img { height: 30px; max-width: 160px; }
+            .nav.scrolled .nav-logo img { height: 26px; }
             .hamburger { display: flex; }
             .nav-links {
                 display: flex; flex-direction: column;
