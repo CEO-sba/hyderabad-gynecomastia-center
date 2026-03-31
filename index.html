@@ -151,14 +151,32 @@
             max-width: 1240px; margin: 0 auto; padding: 0 28px;
             display: flex; align-items: center; justify-content: space-between;
         }
-        .nav-logo img {
-            height: 44px;
-            max-width: 200px;
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .nav-logo .logo-hgc {
+            height: 40px;
             object-fit: contain;
             transition: all 0.4s ease;
             filter: drop-shadow(0 2px 8px rgba(43, 108, 176, 0.3));
         }
-        .nav.scrolled .nav-logo img { height: 36px; }
+        .nav-logo .logo-divider {
+            width: 1px;
+            height: 28px;
+            background: rgba(43, 108, 176, 0.3);
+            display: block;
+        }
+        .nav-logo .logo-tny {
+            height: 24px;
+            object-fit: contain;
+            transition: all 0.4s ease;
+            filter: brightness(1.1);
+        }
+        .nav.scrolled .nav-logo .logo-hgc { height: 32px; }
+        .nav.scrolled .nav-logo .logo-divider { height: 22px; }
+        .nav.scrolled .nav-logo .logo-tny { height: 20px; }
         .nav-links { display: flex; align-items: center; gap: 40px; }
         .nav-links a {
             font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7);
@@ -908,8 +926,13 @@
             /* Seamless mobile nav */
             .nav { padding: 14px 0; }
             .nav.scrolled { padding: 10px 0; }
-            .nav-logo img { height: 30px; max-width: 160px; }
-            .nav.scrolled .nav-logo img { height: 26px; }
+            .nav-logo { gap: 8px; }
+            .nav-logo .logo-hgc { height: 28px; }
+            .nav-logo .logo-divider { height: 20px; }
+            .nav-logo .logo-tny { height: 18px; }
+            .nav.scrolled .nav-logo .logo-hgc { height: 24px; }
+            .nav.scrolled .nav-logo .logo-divider { height: 16px; }
+            .nav.scrolled .nav-logo .logo-tny { height: 15px; }
             .hamburger { display: flex; }
             .nav-links {
                 display: flex; flex-direction: column;
